@@ -52,9 +52,9 @@ app.use("/api/product", require("./routes/product"));
 //     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
 //   });
 // }
-app.use('/',(req,res,next)=>{
-  return res.json({status:"deployed successfully"})
-});
+// app.use('/',(req,res,next)=>{
+//   return res.json({status:"deployed successfully"})
+// });
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
