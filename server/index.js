@@ -33,6 +33,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use('/',(req,res,next)=>{
+  return res.json({status:"deployed successfully"})
+})
+
 app.use("/api/users", require("./routes/users"));
 app.use("/api/product", require("./routes/product"));
 
